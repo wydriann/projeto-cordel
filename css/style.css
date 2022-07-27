@@ -9,10 +9,16 @@
     src: url('../fontes/Sriracha-Regular.ttf') format('truetype');
     font-weight: normal;
 }
+
 :root {
     --font1: Verdana, Geneva, Tahoma, sans-serif;
     --font2: 'Passion one', sans-serif;
     --font3: 'Sriracha', sans-serif;
+
+}
+body, html {
+    font-family: var(--font1);
+    height: 100vh;
 
 }
 * {
@@ -23,20 +29,25 @@
 header {
     background-color: black;
     color: white;
-    height: 20vh;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
-
 header > h1 {
     font-family: var(--font2);
+    font-variant: small-caps;
     margin-top: 30px;
     margin-bottom: 10px;
-    font-size: 10vh;
+    font-size: 10vw;
 }
-header > p {
-    font-family: var(--font1);
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
+header a:hover {
+    text-decoration: underline;
+}
+
 section {
     font-family: var(--font3);
     padding-top: 10vh;
@@ -45,15 +56,16 @@ section {
     font-size: 3.5vw;
     min-height: 400px;
 }
-section.normal p {
-    padding-bottom: 2em;
-}
-main section.imagem > p {
+section.imagem > p {
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.699);
-    width: 41vw;
-    
+    color: white;
+    padding: 5px;
 }
-
-main > section.imagem {
-    background-color: lightgray;
+section#img01 {
+    background: black url('../imagens/background001.jpg')  center center no-repeat  fixed;
+    height: 90vw;
+}
+section#img02 {
+    background: black url('../imagens/background002.jpg') center center no-repeat  fixed;
 }
